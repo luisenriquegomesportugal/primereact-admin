@@ -120,8 +120,29 @@ const Layout = ({ children }: ChildContainerProps) => {
     return (
         <React.Fragment>
             <Head>
+                <title>Início :: Refúgio Lifestyle</title>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="initial-scale=1, width=device-width" />
+                <meta name="description" content="Somos uma rede de células pertencente a Igreja do Evangelho Quadrangular - Sede do Pará, que funciona de modo organizo e relacional." />
+                <meta name="robots" content="all" />
+                <meta name="author" content="Refúgio Lifestyle" />
+                <meta name="keywords" content="Refúgio, Jovens, Igreja, Evangelho Quadrangular, Belém" />
+                <meta property="og:type" content="page" />
+                <meta property="og:url" content="https://arearefugio.com.br/" />
+                <meta property="og:title" content="Refúgio Lifestyle" />
+                <meta property="og:image" content="https://arearefugio.com.br/assets/portal/images/refugio.png" />
+                <meta property="og:description" content="Somos uma rede de células pertencente a Igreja do Evangelho Quadrangular - Sede do Pará, que funciona de modo organizo e relacional." />
+                <meta property="article:author" content="Refúgio Lifestyle" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:site" content="@" />
+                <meta name="twitter:title" content="Refúgio Lifestyle" />
+                <meta name="twitter:creator" content="@" />
+                <meta name="twitter:description" content="Somos uma rede de células pertencente a Igreja do Evangelho Quadrangular - Sede do Pará, que funciona de modo organizo e relacional."></meta>
+                <meta property="og:type" content="website"></meta>
+                <meta property="og:title" content="Início :: Refúgio Lifestyle"></meta>
+                <meta property="og:url" content="https://arearefugio.com.br"></meta>
+                <meta property="og:description" content="The ultimate collection of design-agnostic, flexible and accessible React UI Components." />
+                <meta property="og:image" content="https://www.primefaces.org/static/social/sakai-nextjs.png"></meta>
                 <link rel="icon" href={`/favicon.ico`} type="image/x-icon"></link>
             </Head>
 

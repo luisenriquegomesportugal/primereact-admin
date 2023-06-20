@@ -1,13 +1,11 @@
 import type { AppProps } from 'next/app';
-import type { Page } from '../types/types';
-import React from 'react';
-import { LayoutProvider } from '../layout/context/layoutcontext';
-import Layout from '../layout/layout';
-import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
+import 'primereact/resources/primereact.css';
+import { LayoutProvider } from '../layout/context/layoutcontext';
+import Layout from '../layout/layout';
 import '../styles/layout/layout.scss';
-import '../styles/demo/Demos.scss';
+import type { Page } from '../types/types';
 
 type Props = AppProps & {
     Component: Page;

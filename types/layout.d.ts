@@ -31,8 +31,6 @@ export type LayoutState = {
     menuHoverActive: boolean;
 };
 
-export type LayoutThemes = "viva-light" | "viva-dark";
-
 export type LayoutColorSchemes = "light" | "dark";
 
 export type LayoutConfig = {
