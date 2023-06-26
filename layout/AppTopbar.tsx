@@ -1,33 +1,23 @@
-import { User, onAuthStateChanged } from 'firebase/auth';
 import Link from 'next/link';
 import { classNames } from 'primereact/utils';
-import { forwardRef, useContext, useEffect, useImperativeHandle, useRef, useState } from 'react';
-import { auth, login, logout } from "../configs/auth";
+import { forwardRef, useContext, useImperativeHandle, useRef } from 'react';
 import { AppTopbarRef } from '../types/types';
 import AppLogo from './AppLogo';
+import { AuthContext } from './context/authcontext';
 import { LayoutContext } from './context/layoutcontext';
 
 const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
-    const [user, setUser] = useState<User | null>(null);
     const { layoutConfig, layoutState, onMenuToggle, showProfileSidebar, changeTheme, isDesktop } = useContext(LayoutContext);
+    const { isAuthenticated, user, login, logout } = useContext(AuthContext);
     const menubuttonRef = useRef(null);
     const topbarmenuRef = useRef(null);
     const topbarmenubuttonRef = useRef(null);
-    const menu = useRef(null);
 
     useImperativeHandle(ref, () => ({
         menubutton: menubuttonRef.current,
         topbarmenu: topbarmenuRef.current,
         topbarmenubutton: topbarmenubuttonRef.current
     }));
-
-    useEffect(() => {
-        const unsubscribeAuthStateChanged = onAuthStateChanged(auth, (user) => {
-            setUser(user);
-        });
-
-        return unsubscribeAuthStateChanged;
-    }, []);
 
     const onChangeTheme = () => {
         const colorScheme = layoutConfig.colorScheme === 'light' ? 'dark' : 'light';
@@ -63,12 +53,12 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
                     <span>{layoutConfig.colorScheme !== 'light' ? 'Modo Diurno' : 'Modo Noturno'}</span>
                 </button>
                 {
-                    user
+                    isAuthenticated
                         ?
                         <>
-                            <button type="button" className="p-link text-secondary layout-topbar-button" onClick={() => logout()} title="Sair">
+                            <button type="button" className="p-link text-secondary layout-topbar-button force-display" onClick={() => logout()} title="Sair">
                                 {
-                                    user.photoURL
+                                    user?.photoURL
                                         ? <img src={user.photoURL} alt={user.displayName || 'USN'} />
                                         : <i className="pi pi-user"></i>
                                 }
