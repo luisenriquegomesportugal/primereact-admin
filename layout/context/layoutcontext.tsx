@@ -71,7 +71,8 @@ export const LayoutProvider = ({ children }: ChildContainerProps) => {
         setLayoutState,
         onMenuToggle,
         showProfileSidebar,
-        changeTheme
+        changeTheme,
+        isDesktop
     };
 
     return <LayoutContext.Provider value={value}>{children}</LayoutContext.Provider>;

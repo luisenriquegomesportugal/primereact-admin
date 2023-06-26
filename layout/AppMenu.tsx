@@ -10,22 +10,6 @@ const AppMenu = () => {
                 { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' },
             ]
         },
-        {
-            label: 'Refukids',
-            items: [
-                { label: 'Listagem', icon: 'pi pi-fw pi-list', to: '/refukids' },
-                { 
-                    label: 'Chamada', 
-                    icon: 'pi pi-fw pi-file-edit', 
-                    items: [
-                        { label: 'Refubabys', to: '/refukids/chamadas/refubabys', preventExact: true },
-                        { label: 'Refukids 1', to: '/refukids/chamadas/refukids1', preventExact: true },
-                        { label: 'Refukids 2', to: '/refukids/chamadas/refukids2', preventExact: true },
-                        { label: 'Refuteens', to: '/refukids/chamadas/refuteens', preventExact: true },
-                    ]
-                },
-            ]
-        }
     ];
 
     return (

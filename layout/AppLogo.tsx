@@ -10,7 +10,7 @@ const AppLogo: FC<Props> = ({ icone, ...props }) => {
 
     return <img {...props}
         alt="logo"
-        src={`/layout/images/${icone ? "icone" : "logo"}-${layoutConfig.colorScheme}.svg`} />;
+        src={`/layout/images/${icone ? "icone" : "logo"}-${layoutConfig.colorScheme}.png`} />;
 };
 
 export default AppLogo;

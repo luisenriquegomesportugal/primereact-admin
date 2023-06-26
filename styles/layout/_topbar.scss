@@ -22,7 +22,7 @@
         border-radius: 12px;
 
         img {
-            height: 2.5rem;
+            height: 4rem;
             margin-right: .5rem;
         }
 
@@ -52,7 +52,7 @@
             @include focused();
         }
 
-        i {
+        i, img {
             font-size: 1.5rem;
         }
 
@@ -69,7 +69,7 @@
     .layout-topbar-menu-button {
         display: none;
 
-        i {
+        i, img {
             font-size: 1.25rem;
         }
     }
@@ -134,7 +134,7 @@
                 border-radius: 12px;
                 padding: 1rem;
 
-                i {
+                i, img {
                     font-size: 1rem;
                     margin-right: .5rem;
                 }

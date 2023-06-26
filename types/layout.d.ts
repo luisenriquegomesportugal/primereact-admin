@@ -46,6 +46,7 @@ export interface LayoutContextProps {
     setLayoutConfig: Dispatch<SetStateAction<LayoutConfig>>;
     layoutState: LayoutState;
     setLayoutState: Dispatch<SetStateAction<LayoutState>>;
+    isDesktop: () => boolean;
     onMenuToggle: () => void;
     showProfileSidebar: () => void;
     changeTheme: (colorScheme: LayoutColorSchemes, noPersist?: boolean) => void;
