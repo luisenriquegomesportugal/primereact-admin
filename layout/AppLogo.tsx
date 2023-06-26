@@ -1,12 +1,16 @@
 import { FC, HTMLAttributes, useContext } from "react";
 import { LayoutContext } from "./context/layoutcontext";
 
-const AppLogo: FC<HTMLAttributes<HTMLImageElement>> = (props) => {
+type Props = HTMLAttributes<HTMLImageElement> & {
+    icone?: boolean
+}
+
+const AppLogo: FC<Props> = ({ icone, ...props }) => {
     const { layoutConfig } = useContext(LayoutContext);
 
     return <img {...props}
         alt="logo"
-        src={`/layout/images/logo-${layoutConfig.colorScheme !== 'light' ? 'white' : 'dark'}.svg`} />;
+        src={`/layout/images/${icone ? "icone" : "logo"}-${layoutConfig.colorScheme}.svg`} />;
 };
 
 export default AppLogo;
